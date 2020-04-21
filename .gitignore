@@ -141,3 +141,4 @@ cython_debug/
 .idea
 
 # custom files
+covid_datasets-dev

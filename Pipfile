@@ -4,9 +4,14 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+pytest = "*"
+pylint = "*"
+Flask = "==1.0.2"
 
 [packages]
 requests = "*"
+python-dotenv = "*"
+google-cloud-storage = "*"
 
 [requires]
 python_version = "3.7"
