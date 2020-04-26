@@ -19,10 +19,10 @@ class MainTest(unittest.TestCase):
         def endpoint():
             return main.run(request)
 
+    @mock.patch('client.CovidClient.get')
     @mock.patch('flask.request')
-    def test_should_save_summary_data(self, request_mock):
-        request_mock.get_json.return_value = self._get_summary_data()
-
+    def test_should_save_summary_data(self, request_mock, covid_client_mock):
+        covid_client_mock.return_value = self._get_summary_data()
         with patch('google.cloud.storage.Client') as client_mock:
             upload_from_string_mock = Mock()
             bucket_mock = Mock()
