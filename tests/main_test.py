@@ -34,7 +34,7 @@ class MainTest(unittest.TestCase):
             main.run(request_mock)
 
         self.assertEquals(self.bucket_name, bucket_mock.call_args_list[0][0][0])
-        self.assertEquals('2020/04/2020-04-19.json', blob_mock.call_args_list[0][0][0])
+        self.assertEquals('raw/2020/04/2020-04-19.json', blob_mock.call_args_list[0][0][0])
         self.assertEquals(self._get_summary_data(), json.loads(upload_from_string_mock.call_args_list[0][0][0]))
 
     def _get_summary_data(self):

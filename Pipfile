@@ -12,6 +12,8 @@ Flask = "==1.0.2"
 requests = "*"
 python-dotenv = "*"
 google-cloud-storage = "*"
+gcsfs = "*"
+pytz = "*"
 
 [requires]
 python_version = "3.7"
